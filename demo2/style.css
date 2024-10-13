@@ -1,24 +1,31 @@
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-color: #f0f2f5;
   }
   
   .container {
     background-color: #fff;
-    border: 2px solid #007bff;
-    border-radius: 8px;
     padding: 20px;
-    width: 300px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
   h1 {
+    font-size: 24px;
     color: #333;
+    margin-bottom: 20px;
   }
   
   .input-container {
@@ -29,17 +36,26 @@ body {
   input[type="text"] {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
   }
   
   button {
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     background-color: #007bff;
-    color: white;
-    border-radius: 0 4px 4px 0;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
   }
   
   button:hover {
@@ -47,31 +63,50 @@ body {
   }
   
   ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
   }
   
   li {
-    background-color: #e6f7ff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px 0;
+    transition: transform 0.2s;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+  }
+  
+  li .text {
+    flex: 1;
+    text-align: left;
+    color: #333;
   }
   
   li button {
-    background-color: #ff4d4f;
+    background-color: transparent;
     border: none;
-    color: white;
-    padding: 5px;
-    border-radius: 4px;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  li button.edit-btn {
+    color: #ffc107;
+  }
+  
+  li button.delete-btn {
+    color: #ff4d4f;
   }
   
   li button:hover {
-    background-color: #ff1a1a;
+    background-color: #f0f2f5;
   }
   

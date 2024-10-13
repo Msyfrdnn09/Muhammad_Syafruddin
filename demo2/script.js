@@ -18,8 +18,8 @@ function deleteTask(index) {
 
 function editTask(index) {
   const newTask = prompt("Edit your task:", tasks[index]);
-  if (newTask) {
-    tasks[index] = newTask;
+  if (newTask && newTask.trim() !== "") {
+    tasks[index] = newTask.trim();
     renderTasks();
   }
 }
@@ -30,18 +30,24 @@ function renderTasks() {
 
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
-    li.textContent = task;
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = () => deleteTask(index);
+    
+    const taskText = document.createElement('span');
+    taskText.className = "text";
+    taskText.textContent = task;
 
     const editBtn = document.createElement('button');
-    editBtn.textContent = "Edit";
+    editBtn.className = "edit-btn";
+    editBtn.innerHTML = "✏️";
     editBtn.onclick = () => editTask(index);
 
-    li.appendChild(deleteBtn);
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = "delete-btn";
+    deleteBtn.innerHTML = "🗑️";
+    deleteBtn.onclick = () => deleteTask(index);
+
+    li.appendChild(taskText);
     li.appendChild(editBtn);
+    li.appendChild(deleteBtn);
     taskList.appendChild(li);
   });
 }
