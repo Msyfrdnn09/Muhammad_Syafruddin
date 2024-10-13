@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #003580;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 15px;
+}
+
+.search-bar {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input,
+.search-bar select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #febb02;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.destinations {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.destinations h2 {
+    margin-bottom: 20px;
+}
+
+.destinations-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.destination {
+    flex: 1 1 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+}
+
+.destination img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.trending {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.trending h2 {
+    margin-bottom: 20px;
+}
+
+.trending-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #f7f7f7;
+    padding: 40px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #064bad;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-logos img {
+    height: 30px;
+    width: auto;
+}
