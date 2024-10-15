@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan Sederhana</title>
+    <script>
+        function hitungPenjumlahan() {
+            // Mengambil nilai dari input
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            
+            // Melakukan penjumlahan
+            const hasil = angka1 + angka2;
+
+            // Menampilkan hasil
+            document.getElementById('hasil').innerText = 'Hasil: ' + hasil;
+        }
+    </script>
+</head>
+<body>
+    <h1>Operasi Penjumlahan</h1>
+    <label for="angka1">Angka 1:</label>
+    <input type="number" id="angka1"><br><br>
+    
+    <label for="angka2">Angka 2:</label>
+    <input type="number" id="angka2"><br><br>
+    
+    <button onclick="hitungPenjumlahan()">Hitung</button>
+    
+    <h2 id="hasil"></h2>
+</body>
+</html>

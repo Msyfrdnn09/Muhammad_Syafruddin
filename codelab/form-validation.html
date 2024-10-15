@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            let valid = true;
+
+            // Menghapus pesan kesalahan sebelumnya
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+
+            // Validasi Nama
+            if (name.trim() === '') {
+                alert('Nama harus diisi.');
+                document.getElementById('nameError').innerText = 'Nama harus diisi.';
+                valid = false;
+            }
+
+            // Validasi Email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.trim() === '') {
+                alert('Email harus diisi.');
+                document.getElementById('emailError').innerText = 'Email harus diisi.';
+                valid = false;
+            } else if (!emailPattern.test(email)) {
+                alert('Email tidak valid.');
+                document.getElementById('emailError').innerText = 'Email tidak valid.';
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Pendaftaran</h1>
+    <form onsubmit="return validateForm()">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <span id="nameError" class="error"></span><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <span id="emailError" class="error"></span><br><br>
+
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+</html>
