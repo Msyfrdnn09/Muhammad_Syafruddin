@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradise Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Hotel UMM</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Hotel UMM</h1>
+            <p>Pesan sekarang dan nikmati penawaran eksklusif!</p>
+            <button class="btn" onclick="scrollToSection('rooms')">Pilih Kamar</button>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <h2>Our Rooms</h2>
+        <p>Temukan kamar yang sempurna untuk masa menginap Anda,sesuaikan dengan kenyamanan dan kebutuhan Anda.</p>
+        <div class="room-list">
+            <div class="room">
+                <img src="room1.jpg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Rp 1.500.000 per Malam</p>
+                <button onclick="bookRoom('Deluxe Room')">Book Now</button>
+            </div>
+            <div class="room">
+                <img src="room2.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Rp 3.000.000 per Malam</p>
+                <button onclick="bookRoom('Suite Room')">Book Now</button>
+            </div>
+            <div class="room">
+                <img src="room3.jpg" alt="Family Room">
+                <h3>Family Room</h3>
+                <p>Rp 2.000.000 per Malam</p>
+                <button onclick="bookRoom('Family Room')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <img src="spa.jpg" alt="Spa and Wellness">
+                <h3>Spa & Wellness</h3>
+                <p>Rejuvenate your mind and body with our premium spa services.</p>
+            </div>
+            <div class="service">
+                <img src="dining.jpg" alt="Fine Dining">
+                <h3>Fine Dining</h3>
+                <p>Indulge in world-class cuisine at our luxury restaurants.</p>
+            </div>
+            <div class="service">
+                <img src="pool.jpg" alt="Swimming Pool">
+                <h3>Exclusive Pool</h3>
+                <p>Enjoy a relaxing swim in our infinity pools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Gallery Image 1">
+            <img src="gallery2.jpg" alt="Gallery Image 2">
+            <img src="gallery3.jpg" alt="Gallery Image 3">
+            <img src="gallery4.jpg" alt="Gallery Image 4">
+            <img src="gallery5.jpg" alt="Gallery Image 5">
+            <img src="gallery6.jpg" alt="Gallery Image 6">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Hotel Paradise. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
